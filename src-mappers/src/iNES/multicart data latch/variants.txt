@@ -1,0 +1,54 @@
+c	1=Write-protect CHR-RAM
+D	1=Address bit replacement solder pad
+d	1=Disable PRG-ROM solder pad
+F	1=FDS mode
+M	Mirroring, 1=H
+m	Mirroring, 1=V
+l	Lock bit
+L	NROM mode, 1=NROM, 0=UNROM with fixed bank first overall
+N	NROM mode, 1=NROM, 0=UNROM as defined by U/u bit
+n	NROM mode, 0=NROM, 1=UNROM as defined by U/u bit
+O	1=UOROM rather than UNROM
+S	NROM size, 1=NROM-256
+s	NROM size, 1=NROM-128
+t	NROM size, 1=NROM-128 also disable PRG-ROM solder pad when not in NROM mode
+U	UNROM fixed bank, 1=last inner, 0=first inner
+u	UNROM fixed bank, 1=last inner, 0=first overall
+v	Data latch-based UNROM mode also P bit
+V	Data latch-based UNROM mode
+
+P	PRG-ROM address bit
+C	CHR address bit
+Q	PRG and CHR bit
+
+[1... .... .... ....]	[.... ....]	.	.
+[1... .... .... ....]	[.... PPCC]	203	NROM-128
+[1... .... .... ....]	[.mPP CCCC]	271	NROM-256
+[1... .... .... ....]	[..LM N..S]	277	UNROM
+                              PPPP
+[1... .... .... ....]	[.... PPPP]	283	last bank at 6000
+[1... .... .... ....]	[MNM. PPPP]	285.0	UNROM/NROM-256
+[1... .... .... ....]	[MN1P MPPP]	285.1	UNROM/NROM-256
+[1... .... .... ....]	[MQQQ ..CC]	299	NROM-256
+[1... .... .... ....]	[.PPP LPPP]	324	NROM-128
+[1... .... .... ....]	[..MP PPPP]	336.0	UNROM
+[1... .... .... ....]	[...P pPPP]	336.1	UNROM
+[1... .... .... ....]	[...P MPPP]	336.2	UNROM
+[1... .... .... ....]	[.... PPPP]	343.0	NROM-128
+[1... .... .... ....]	[.... PPPP]	343.0	NROM-256
+[1... .... .... ....]	[..P1 pMPP]	378	AOROM
+[1... .... .... ....]	[.... CCPP]	379	NROM-256
+[1... .... .... ....]	[.PPP PPCC]	429.0	NROM-256 (initial PRG bank = 1)
+[1... .... .... ....]	[1PPP PPCC]	429.1	NROM-256 (initial PRG bank = 1)
+[1... .... .... ....]	[dMsP PPPP]	433	NROM-256
+[1... .... .... ....]	[PPPM .PPP]	453	UNROM
+[1... .... .... ....]	[.... QQQQ]	477	NROM-128 (with 8000-BFFF mapped to the last bank), except when QQQQ=0/1. Strange bus conflict behavior.
+[1... .... .... ....]	[P... .ppp]	481	UNROM
+[1... .... .... ....]	[sM.P PPPP]	482	NROM-256. DIP when addr &3=3
+[1... .... .... ....]	[MM.P PPPP]	489	NROM-128. NROM-256 when addr&1F=2
+[1... .... .... ....]	[..LM PPPP]	564	NROM-256 (AOROM sizes, 1=256, 0=128)
+                              S
+[1... .... .... ....]	[.NMP PPPP]	764	UNROM/NROM-256
+[1... .... .... ....]	[.... ....]	.	.
+[1... .... .... ....]	[.... ....]	.	.
+

@@ -1,0 +1,92 @@
+c	1=Write-protect CHR-RAM
+D	1=Address bit replacement solder pad
+d	1=Disable PRG-ROM solder pad
+F	1=FDS mode
+M	Mirroring, 1=H
+m	Mirroring and also PRG bit, 1=H
+l	Lock bit
+L	NROM mode, 1=NROM, 0=UNROM with fixed bank first overall
+N	NROM mode, 1=NROM, 0=UNROM as defined by U/u bit
+n	NROM mode, 0=NROM, 1=UNROM as defined by U/u bit
+O	1=UOROM rather than UNROM
+S	NROM size, 1=NROM-256
+s	NROM size, 1=NROM-128
+t	NROM size, 1=NROM-128 also disable PRG-ROM solder pad when not in NROM mode
+U	UNROM fixed bank, 1=last inner, 0=first inner
+u	UNROM fixed bank, 1=last inner, 0=first overall
+v	Data latch-based UNROM mode also P bit
+V	Data latch-based UNROM mode
+
+P	PRG-ROM address bit
+C	CHR address bit
+Q	PRG and CHR bit
+
+[1... .... MsCC CPPP]			58		Default: NROM-256
+[1... ..LD SPPP MCCC]			59		Default: NROM-128
+[1... CCCC M.ps PPPP]			61		Default: NROM-256
+[1... .cPP PPPP PPMS]			63.0		Default: NROM-128
+[1... ..cP PPPP PPMS]			63.1		Default: NROM-128
+[1... .... SPPP CCCM]			174		Default: NROM-128
+[1... .... .... MQQQ]			200.0		Only NROM-128 (also DIP)
+[1... .... .... .MQQ]			200.1		Only NROM-128 (also DIP)
+[1... .... .... .PPP]			201		Only NROM-256
+[1... .... ..PP PPPM]			202		NROM-256 if bank ==4
+[1... .... ..SM QQQQ]			204		NROM-128
+[1S.. .... .... MQQQ]			212		NROM-128
+[1... .... .... sQMQ]			213		Default: NROM-256, originally an alias for 213 but now reassigned
+[1... .... ...P PP..]			214		Only NROM-128. Same as 300 but with hard-wired mirroring.
+[1... .... .... PPCC]			217		Only NROM-256
+[1... .DUP NPPP PPMS]			227.0	many	Default: UNROM with fixed inner bank #0. No CHR-RAM protect in NROM mode.
+[1... .DUP NPPP PPMS]			227.1	many	Default: UNROM with fixed inner bank #0.
+[1... .DuP NPPP PPMS]			227.2	many	Default: UNROM with fixed overall bank #0.
+[1... .D.P LPPP PPMS]			227.3	many	Default: UNROM with fixed overall bank #0.
+[1... .... ..MP PPPP]			229		NROM-256 if ~bank &0x1E
+[1... .... MMSP PPPP]			231		NROM-128 (???)
+[1... .... ...M QSQQ]			239		s also mirroring, inverted
+[1... ..UD NPPP PPMS]			242.0	many	Default: UNROM with fixed inner bank #0. No CHR-RAM protect in NROM mode.
+[1... ..UD NPPP PPMS]			242.1	many	Default: UNROM with fixed inner bank #0.
+[1... ..PP PSPM CCCC]			261		NROM-128
+[1.L. .PPP NPP. ..MS]	[.... .ppp]	265		NROM-128
+[1... .... NPPP PPMS]			280	many	Default: UNROM with fixed overall bank #0. Reset-based switch to pure UNROM (Contra).
+[1... ...D ..MP PCCC]			288		Only NROM-256 (DIP mask 0x120)
+[1PPP PMCC SQ.. .CCC]			290		NROM-128
+[1... .... ...P PP.M]			300	2x	Only NROM-128. Same as 214 but with selectable mirroring.
+[1... .... .... MQQQ]			338  		Only NROM-128 (also DIP) mirroring inverted compared to 200.0
+[1... .... PMNP PPPs]			340  		NROM-256
+[1... mQQQ .... ....]			341.0  		NROM-256
+[1... ..mQ .... ....]			341.1		NROM-256
+[1... n... Ms.P PPPP]			349		Default: NROM-256
+[1... VPUP NPPP PPMS]	[.... .ppp]	375	1x 	Default: UNROM with fixed inner bank #0
+[1... ..ND cPPP PPMs]			380.0	many	Default: UNROM with fixed back #7
+[1... ..NO cPPP PPMs]			380.1	many	Default: UNROM with fixed back #7
+[1... ..ND cPmP PP.s]			380.2	many	Default: UNROM with fixed back #7
+[1... .... .... PPPM]			385		Only NROM-128
+[1... FC.. Ms.P PPPP]			402		Default: NROM-256
+[1... .dNP .PPP PPMs]			435.0	5x 	Default: UNROM with fixed bank #7
+[1... .PNP .PPP PPMt]			435.1	5x 	Default: UNROM with fixed bank #7
+[1... .PDP NPPP PPMS]	[.... ..cc]	449.0	8x	Default: UNROM with fixed bank #7, solder pad via $8000-$FFFF
+[1... .P.P NPPP PPMS]	[.... ..cc]	449.1	8x	Default: UNROM with fixed bank #7, solder pad via $5000-$5FFF, no CHR-RAM protect in NROM mode
+[1... ...v NPPP PPMS]	[.... .ppp]	454  	1x	Default: UNROM with fixed overall #0.
+[1... ...M CPPC .NCC]			459		Default: UNROM with fixed bank #7
+[1... PPPP PSMC CCCC]			464		Default: NROM-256
+[1... ..VP NPPP PPMS]	[.... .ppp]	465  	1x	Default: UNROM with fixed inner bank #0.
+[1... .... ...Q .SQQ]			488		Default: NROM-256
+[1... .... ..QQ PCCM]			492		Default: NROM-256
+             S       		        	
+[1... ...N CCCQ PPMs]			494  	2x 	Default: UNROM with fixed bank #7
+[1... .... PPPP PPsM]			541	2x	Default: NROM-256
+[1... .... .... MQQQ]			575		NROM-128, NROM-256 if addr&6=6
+[1... ..Ms PPPP CCCC]			576		Default: NROM-256
+[1... .... ..dd CQQP]			577		Only NROM-128
+[1... ..n. cPPP PPMS]			579	1x	Default: NROM-128
+[1... .... QQQQ CCMS]			580		Default: NROM-128
+[1... .... MPNP PPPs]			581		Default: UNROM with fixed bank #7
+[1... .... ..PP ..MP]	[...1 .pPP]	583		Default: UNROM with fixed bank #7
+             AS S
+[1... .... ...M PPPS]			585		mirroring inverted, also DIP
+[1... .... .... sQQQ]			586		s also mirroring, inverted
+[1... .... ...P PSUM]			587		Default: NROM-128/ANROM
+[1... .... MCps QQQQ]			588		Default: NROM-256
+[1... .... .... PPQC]			591		Default: NROMN-128, -256 IF PP = 0xC
+                M
+		  
