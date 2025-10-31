@@ -21,6 +21,12 @@
       <UniqueIdentifier>{b389444a-115a-4f8e-8769-062f29ad6d8c}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
+    <Filter Include="Header Files\dbginfo">
+      <UniqueIdentifier>{5c109d52-cc0f-4cf6-b424-8f925381c8e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\_dbginfo">
+      <UniqueIdentifier>{2a1eb354-e9d4-4dc6-a7ea-332dbc779f7e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\APU.cpp">
@@ -338,6 +344,15 @@
     <ClCompile Include="..\src\c_s_mouse_belsonic.cpp">
       <Filter>Source Files\Std Controllers</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\DebugExt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Genie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dbginfo\dbginfo.c">
+      <Filter>Source Files\_dbginfo</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\APU.h">
@@ -501,6 +516,18 @@
     </ClInclude>
     <ClInclude Include="..\src\PS2DevicePort.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DebugExt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Genie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dbginfo\dbginfo.h">
+      <Filter>Header Files\dbginfo</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

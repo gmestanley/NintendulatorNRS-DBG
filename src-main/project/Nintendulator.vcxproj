@@ -85,7 +85,7 @@
       <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IntrinsicFunctions>
       <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</OmitFramePointers>
       <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\src\lua-5.2.3\src\; ..src\iup-3.10.1_Win32_vc12_lib\include\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\src\lua-5.2.3\src\; ..\src\cd-5.5.1_Win32_vc10_lib\include\; ..\src\iup-3.10.1_Win32_vc12_lib\include\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link />
     <Link>
@@ -130,6 +130,8 @@
     <ClCompile Include="..\src\c_s_mouse_subor.cpp" />
     <ClCompile Include="..\src\c_s_mouse_yuxing.cpp" />
     <ClCompile Include="..\src\c_s_sudokuExcalibur.cpp" />
+    <ClCompile Include="..\src\dbginfo\dbginfo.c" />
+    <ClCompile Include="..\src\DebugExt.cpp" />
     <ClCompile Include="..\src\Debugger.cpp" />
     <ClCompile Include="..\src\DIPSwitch.cpp" />
     <ClCompile Include="..\src\FDS.cpp" />
@@ -148,6 +150,7 @@
     <ClCompile Include="..\src\FDSFile\FDSProtection.cpp" />
     <ClCompile Include="..\src\FDS_Patch.cpp" />
     <ClCompile Include="..\src\Filter.cpp" />
+    <ClCompile Include="..\src\Genie.cpp" />
     <ClCompile Include="..\src\GFX.cpp" />
     <ClCompile Include="..\src\Hash.cpp" />
     <ClCompile Include="..\src\HeaderEdit.cpp" />
@@ -210,8 +213,11 @@
     <ClInclude Include="..\src\APU.h" />
     <ClInclude Include="..\src\AVI.h" />
     <ClInclude Include="..\src\Cheats.hpp" />
+    <ClInclude Include="..\src\Config.h" />
     <ClInclude Include="..\src\Controllers.h" />
     <ClInclude Include="..\src\CPU.h" />
+    <ClInclude Include="..\src\dbginfo\dbginfo.h" />
+    <ClInclude Include="..\src\DebugExt.h" />
     <ClInclude Include="..\src\Debugger.h" />
     <ClInclude Include="..\src\DIPSwitch.h" />
     <ClInclude Include="..\src\FDS.h" />
@@ -231,6 +237,7 @@
     <ClInclude Include="..\src\FDSFile\FDSProtection.hpp" />
     <ClInclude Include="..\src\FDS_Patch.h" />
     <ClInclude Include="..\src\Filter.h" />
+    <ClInclude Include="..\src\Genie.h" />
     <ClInclude Include="..\src\GFX.h" />
     <ClInclude Include="..\src\Hash.h" />
     <ClInclude Include="..\src\HeaderEdit.h" />
