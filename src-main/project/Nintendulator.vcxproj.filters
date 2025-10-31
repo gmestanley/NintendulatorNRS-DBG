@@ -510,6 +510,9 @@
     <None Include="..\src\small.ico">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\LICENSE" />
+    <None Include="..\..\README.md" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\src\Nintendulator.rc">

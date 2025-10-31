@@ -261,6 +261,9 @@
     <ClInclude Include="..\src\WXN.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\LICENSE" />
+    <None Include="..\..\README.md" />
     <None Include="..\src\Nintendulator.ico" />
     <None Include="..\src\small.ico" />
   </ItemGroup>
